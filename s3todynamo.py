@@ -1,4 +1,4 @@
-[07/12/18 11:14 AM] Horne, Andy: from __future__ import print_function
+from __future__ import print_function
 
 import boto3
 import decimal
@@ -75,4 +75,4 @@ def lambda_handler(event, context):
 				conf = index['FaceMatches'][0]['Similarity']
 				conf = decimal.Decimal(conf)
 				response = doortable.put_item(Item = {'entry': 1, 'time': fileName, 'faceId': faceId, 'Confidence': conf})
-[07/12/18 11:15 AM] Horne, Andy: dynamoexample:
+
